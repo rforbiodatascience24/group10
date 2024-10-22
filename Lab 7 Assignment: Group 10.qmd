@@ -15,6 +15,10 @@ Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), A
 ## Load data
 
 ```{r}
+rm(list=ls())
+```
+
+```{r}
 library(tidyverse)
 ```
 
@@ -25,6 +29,7 @@ Here we load in the data
 target_url <- "https://github.com/ramhiser/datamicroarray/raw/master/data/gravier.RData"
 output_file <- "data/gravier.RData"
 curl::curl_download(url = target_url, destfile = output_file)
+
 
 ```
 
@@ -58,6 +63,17 @@ gravier_clean_aug <- gravier_clean |>
 ## Data Analysis
 
 ### Investigating PC coordinates
+
+```{r}
+pca_fit %>%
+  augment() %>% # add original dataset back in
+  ggplot(aes(.fittedPC1, .fittedPC2, color = outcome)) + 
+  geom_point(size = 1.5) +
+  scale_color_manual(
+    values = c(malignant = "#D55E00", benign = "#0072B2")
+  ) +
+  theme_half_open(12) + background_grid()
+```
 
 ### Principal Component Analysis - PCA
 
