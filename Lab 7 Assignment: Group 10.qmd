@@ -1,14 +1,16 @@
 ---
 title: "Lab 7 Assignment: Group 10"
-format: html
+format: 
+  html:
+    embed-resources: true
 editor: visual
 ---
 
 ## Lab 7 Group Assignment
 
-Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), Amalie Schultz-Nielsen (s204643) and Malou Bech Jakobsen (s203515)
+**Group 10**
 
-### Group 10
+Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), Amalie Schultz-Nielsen (s204643) and Malou Bech Jakobsen (s203515)
 
 ## Load data
 
@@ -80,4 +82,6 @@ pca_fit %>%
   theme_half_open(12) + background_grid()
 ```
 
-### Data Visualisation
+### Principal Component Analysis - PCA
+
+### Evaluating the variance explained in each PC
