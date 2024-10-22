@@ -25,9 +25,15 @@ library(broom)
 Here we load in the data
 
 ```{r}
+# downloading the data 
 target_url <- "https://github.com/ramhiser/datamicroarray/raw/master/data/gravier.RData"
 output_file <- "data/gravier.RData"
 curl::curl_download(url = target_url, destfile = output_file)
+```
+
+```{r}
+# Loading the gravier into a list
+load(output_file)
 
 ```
 
@@ -60,6 +66,16 @@ gravier_clean_aug <- gravier_clean |>
 
 ## Data Analysis
 
+### Principal Component Analysis - PCA
+
+```{r}
+
+pca_fit <- gravier_clean_aug %>% 
+  select(where(is.numeric)) %>% # retain only numeric columns
+  prcomp(scale = TRUE) # do PCA on scaled data
+
+```
+
 ### Investigating PC coordinates
 
 ```{r}
@@ -73,6 +89,6 @@ pca_fit %>%
   theme_half_open(12) + background_grid()
 ```
 
-### Principal Component Analysis - PCA
+### 
 
 ### Evaluating the variance explained in each PC
