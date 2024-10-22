@@ -14,4 +14,17 @@ editor: visual
 
 ## Sofie
 
+Hej med jer.
+
+Kode kommer her:
+
+```{r}
+1+1
+
+```
+
+```{r}
+10^2
+```
+
 ## Malou
