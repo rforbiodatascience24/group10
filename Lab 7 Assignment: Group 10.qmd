@@ -1,0 +1,29 @@
+---
+title: "Lab 7 Assignment: Group 10"
+format: html
+editor: visual
+---
+
+## Lab 7 Group Assignment
+
+### Group 10
+
+## Load data
+
+```{r}
+library(tidyverse)
+```
+
+Here we load in the data
+
+```{r}
+
+```
+
+## Data wrangling
+
+## Data Analysis
+
+### Investigating PC coordinates
+
+### Data Visualisation
