@@ -8,9 +8,9 @@ editor: visual
 
 ## Lab 7 Group Assignment
 
-Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), Amalie Schultz-Nielsen (s204643) and Malou Bech Jakobsen (s203515)
+**Group 10**
 
-### Group 10
+Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), Amalie Schultz-Nielsen (s204643) and Malou Bech Jakobsen (s203515)
 
 ## Load data
 
