@@ -22,19 +22,10 @@ Here we load in the data
 
 ```{r}
 
-raw_dir <- "data/_raw/"
-data_file <- "gravier.RData"
-data_loc <- "https://github.com/ramhiser/datamicroarray/raw/master/data/"
+target_url <- "https://github.com/ramhiser/datamicroarray/raw/master/data/gravier.RData"
+output_file <- "data/gravier.RData"
+curl::curl_download(url = target_url, destfile = output_file)
 
-if( !dir.exists(raw_dir) ){
-  dir.create(path = raw_dir)
-}
-if( !file.exists(str_c(raw_dir, data_file)) ){
-  download.file(
-    url = str_c(data_loc, data_file),
-    destfile = str_c(raw_dir, data_file))
-}
-load(file = str_c(raw_dir, data_file))
 ```
 
 ## Data wrangling
