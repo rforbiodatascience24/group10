@@ -66,4 +66,6 @@ gravier_clean_aug <- gravier_clean |>
 
 ### Investigating PC coordinates
 
-### Data Visualisation
+### Principal Component Analysis - PCA
+
+### Evaluating the variance explained in each PC
