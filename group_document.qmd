@@ -8,7 +8,27 @@ editor: visual
 
 ## Marie
 
+We want to define x and y as two vectors for later use
+
+```{r}
+
+#defining x
+x <- c(1,2,3,4,5,3)
+x
+#defining y
+y <- c(9,7,6,5,4,3)
+y
+```
+
 ## Amalie
+
+Now It is time for the bestest part of the whole script
+
+```{r}
+GroupMembers <- c("Amalie","Johanna","Sofie","Marie","Malou")
+
+Student_ids <- c("s204643","s203566","s203566","s203515","s204657","s194678")
+```
 
 ## Johanna
 
@@ -28,3 +48,10 @@ Kode kommer her:
 ```
 
 ## Malou
+
+Now we will add some changes to the document, so that we can update and see all other peoples changes. Here is a simple one:
+
+```{r}
+x <- 2+2
+x
+```
