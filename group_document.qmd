@@ -59,7 +59,16 @@ Kode kommer her:
 ```
 
 ```{r}
-10^2
+hej <- 10^2
+```
+
+## New feature
+
+I will enter some next text, I did! Wuhu!
+
+```{r}
+hej1 <- hej*2
+hej1
 ```
 
 ## Malou
