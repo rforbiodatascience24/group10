@@ -14,22 +14,20 @@ Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), A
 
 ## Load data
 
-```{r}
-rm(list=ls())
+```{}
 ```
 
 ```{r}
+rm(list=ls())
 library(tidyverse)
 ```
 
 Here we load in the data
 
 ```{r}
-
 target_url <- "https://github.com/ramhiser/datamicroarray/raw/master/data/gravier.RData"
 output_file <- "data/gravier.RData"
 curl::curl_download(url = target_url, destfile = output_file)
-
 
 ```
 
