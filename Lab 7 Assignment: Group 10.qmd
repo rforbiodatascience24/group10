@@ -19,12 +19,6 @@ Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), A
 
 ```{r}
 rm(list=ls())
-
-
-```
-
-```{r}
-rm(list=ls())
 library(tidyverse)
 library(broom)
 ```
