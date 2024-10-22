@@ -10,6 +10,14 @@ editor: visual
 
 ## Amalie
 
+Now It is time for the bestest part of the whole script
+
+```{r}
+GroupMembers <- c("Amalie","Johanna","Sofie","Marie","Malou")
+
+Student_ids <- c("s204643","s203566","s203566","s203515","s204657","s194678")
+```
+
 ## Johanna
 
 ## Sofie
