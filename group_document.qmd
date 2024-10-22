@@ -70,3 +70,12 @@ Now we will add some changes to the document, so that we can update and see all 
 x <- 2+2
 x
 ```
+
+### New feature
+
+This new feature is further opreations on x.
+
+```{r}
+y <- x^2 + x^3 + x^4
+y
+```
