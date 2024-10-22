@@ -20,6 +20,16 @@ y <- c(9,7,6,5,4,3)
 y
 ```
 
+### New feature
+
+No we try to multiply the vectors to get vector c:
+
+```{r}
+# Combining the vectors x and y
+c <- x + y
+c
+```
+
 ## Amalie
 
 ## Johanna
