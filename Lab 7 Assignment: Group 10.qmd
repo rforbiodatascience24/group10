@@ -69,6 +69,7 @@ gravier_clean_aug <- gravier_clean |>
 ### Principal Component Analysis - PCA
 
 ```{r}
+# we do the PCA on the numers in our dataframe which are numeric 
 
 pca_fit <- gravier_clean_aug %>% 
   select(where(is.numeric)) %>% # retain only numeric columns
@@ -80,15 +81,12 @@ pca_fit <- gravier_clean_aug %>%
 
 ```{r}
 pca_fit %>%
-  augment() %>% # add original dataset back in
-  ggplot(aes(.fittedPC1, .fittedPC2, color = outcome)) + 
-  geom_point(size = 1.5) +
-  scale_color_manual(
-    values = c(malignant = "#D55E00", benign = "#0072B2")
-  ) +
-  theme_half_open(12) + background_grid()
+  augment(gravier_clean_aug) %>% # add original dataset back in 
+  ggplot(aes(.fittedPC1, .fittedPC2, color=as.factor(early_metastasis))) +
+  geom_point() + 
+  ggtitle('Principal components coordinats') +
+  guides(color = guide_legend(title = "Early metastasis"))
+  
 ```
-
-### 
 
 ### Evaluating the variance explained in each PC
