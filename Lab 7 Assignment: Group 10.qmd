@@ -16,10 +16,6 @@ Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), A
 
 ## Load data
 
-<<<<<<< HEAD
-T
-=======
->>>>>>> e057845ee067807054ad89ed1c43019e21fc494a
 
 ```{r}
 rm(list=ls())
