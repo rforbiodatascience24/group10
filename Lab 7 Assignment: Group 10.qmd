@@ -16,7 +16,6 @@ Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), A
 
 ## Load data
 
-
 ```{r}
 rm(list=ls())
 library(tidyverse)
@@ -31,6 +30,10 @@ output_file <- "data/gravier.RData"
 curl::curl_download(url = target_url, destfile = output_file)
 
 ```
+
+## Explanation of data
+
+The Gravier data set contains gene expression data from 168 patients, which is used to classify breast cancer patients into diggerent prognostic groups based on survival outcomes.
 
 ## Data wrangling
 
