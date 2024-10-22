@@ -39,7 +39,7 @@ load(output_file)
 
 ## Explanation of data
 
-The Gravier dataset contains gene expression data from 168 patients with breast cancer. The data is used to classify the patients into two prognostic classes: "good" and "poor" prognosis based on their 5-year survival outcomes. The dataset features 2905 gene expression levels for each patient.
+The Gravier dataset contains gene expression data from 168 patients with breast cancer. The data is used to classify the patients into two prognostic classes: "good" and "poor" prognosis based on their 5-year survival outcomes. The dataset features 2905 gene expression levels for each patient. 111 patients were labelled good and 57 patients were labelled poor.
 
 ## Data wrangling
 
