@@ -95,3 +95,24 @@ pca_fit %>%
 ```
 
 ### Evaluating the variance explained in each PC
+
+We want to look at the principle components
+
+```{r}
+pca_fit |> 
+  tidy(matrix = "eigenvalues")
+```
+
+Now I make the plot for the principle components that are explaining the variance in te gravier dataset
+
+```{r}
+pca_fit |> 
+  tidy(matrix = "eigenvalues") |> 
+  ggplot(aes(PC, percent)) +
+  geom_col(fill = "#56B4E9", alpha = 0.8) +
+  scale_x_continuous(breaks = 1:168) +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    expand = expansion(mult = c(0, 0.01))
+  ) 
+```
