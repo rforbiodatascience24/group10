@@ -12,6 +12,21 @@ editor: visual
 
 ## Johanna
 
+Here is my code
+
+```{r}
+Hej <- 2+2
+```
+
+```{r}
+code <- Hej
+```
+
+```{r}
+1+1+1+1
+
+```
+
 ## Sofie
 
 ## Malou
