@@ -15,3 +15,10 @@ editor: visual
 ## Sofie
 
 ## Malou
+
+Now we will add some changes to the document, so that we can update and see all other peoples changes. Here is a simple one:
+
+```{r}
+x <- 2+2
+x
+```
