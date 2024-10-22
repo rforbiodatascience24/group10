@@ -37,6 +37,10 @@ load(output_file)
 
 ```
 
+## Explanation of data
+
+The Gravier data set contains gene expression data from 168 patients, which is used to classify breast cancer patients into diggerent prognostic groups based on survival outcomes.
+
 ## Data wrangling
 
 **Cleaning data:**
