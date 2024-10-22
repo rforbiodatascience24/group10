@@ -23,3 +23,10 @@ Student_ids <- c("s204643","s203566","s203566","s203515","s204657","s194678")
 ## Sofie
 
 ## Malou
+
+Now we will add some changes to the document, so that we can update and see all other peoples changes. Here is a simple one:
+
+```{r}
+x <- 2+2
+x
+```
