@@ -6,6 +6,8 @@ editor: visual
 
 ## Lab 7 Group Assignment
 
+Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), Amalie Schultz-Nielsen (s204643) and Malou Bech Jakobsen (s203515)
+
 ### Group 10
 
 ## Load data
@@ -18,9 +20,47 @@ Here we load in the data
 
 ```{r}
 
+raw_dir <- "data/_raw/"
+data_file <- "gravier.RData"
+data_loc <- "https://github.com/ramhiser/datamicroarray/raw/master/data/"
+
+if( !dir.exists(raw_dir) ){
+  dir.create(path = raw_dir)
+}
+if( !file.exists(str_c(raw_dir, data_file)) ){
+  download.file(
+    url = str_c(data_loc, data_file),
+    destfile = str_c(raw_dir, data_file))
+}
+load(file = str_c(raw_dir, data_file))
 ```
 
 ## Data wrangling
+
+**Cleaning data:**
+
+```{r}
+gravier_clean <- gravier |>
+  bind_cols() |>
+  as_tibble()
+```
+
+**Compressing the data:**
+
+```{r}
+# tsv is ta seperated
+
+readr::write_tsv(x = gravier_clean, file = gzfile("data/02_gravier_clean.tsv.gz"))
+```
+
+**Changing non-numeric variable:**
+
+```{r}
+gravier_clean_aug <- gravier_clean |>
+  mutate(y = case_when(y == "poor" ~ 1,
+                       y == "good" ~ 0)) |> 
+  relocate(early_metastasis = y)
+```
 
 ## Data Analysis
 
