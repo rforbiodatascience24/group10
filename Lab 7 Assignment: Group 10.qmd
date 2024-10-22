@@ -1,4 +1,6 @@
 ---
+
+---
 title: "Lab 7 Assignment: Group 10"
 format: 
   html:
@@ -14,12 +16,15 @@ Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), A
 
 ## Load data
 
+T
+
 ```{r}
 rm(list=ls())
 ```
 
 ```{r}
 library(tidyverse)
+library(broom)
 ```
 
 Here we load in the data
