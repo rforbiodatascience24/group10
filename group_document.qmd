@@ -30,6 +30,24 @@ GroupMembers <- c("Amalie","Johanna","Sofie","Marie","Malou")
 Student_ids <- c("s204643","s203566","s203566","s203515","s204657","s194678")
 ```
 
+### New Analysis
+
+Here is my analysis of how this groupwork is going
+
+```{r}
+library(tidyverse)
+
+who <- "I "
+What <- "Think "
+Verb <- "is "
+Verb2 <- "going "
+How <- "well"
+
+str_c(who,What,Verb,Verb2,How)
+
+
+```
+
 ## Johanna
 
 Here is my code
