@@ -42,6 +42,18 @@ Student_ids <- c("s204643","s203566","s203566","s203515","s204657","s194678")
 
 ## Johanna
 
+### New Feature
+
+**I like this** *what about you?*
+
+-   Bullet point 1
+
+-   bullet point 2
+
+```{r}
+kode <- "code"
+```
+
 Here is my code
 
 ```{r}
