@@ -20,7 +20,7 @@ Johanna Haraldsdottir (s204657), Marie Kragh (s203566), Sofie Bruun (s194678), A
 ```{r}
 rm(list=ls())
 
->>>>>>> 5e3521f6b584378c99559b64c5a77fda27654227
+
 ```
 
 ```{r}
