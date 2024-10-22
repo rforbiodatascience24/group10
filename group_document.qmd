@@ -8,6 +8,18 @@ editor: visual
 
 ## Marie
 
+We want to define x and y as two vectors for later use
+
+```{r}
+
+#defining x
+x <- c(1,2,3,4,5,3)
+x
+#defining y
+y <- c(9,7,6,5,4,3)
+y
+```
+
 ## Amalie
 
 ## Johanna
