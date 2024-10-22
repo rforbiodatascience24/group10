@@ -50,9 +50,10 @@ gravier_clean <- gravier |>
 **Compressing the data:**
 
 ```{r}
-# tsv is ta seperated
+# tsv is tab seperated
 
-readr::write_tsv(x = gravier_clean, file = gzfile("data/02_gravier_clean.tsv.gz"))
+gravier_clean  |> 
+  write_tsv(file = "data/02_gravier_clean.tsv.gz")
 ```
 
 **Changing non-numeric variable:**
