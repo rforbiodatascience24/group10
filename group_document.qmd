@@ -1,0 +1,17 @@
+---
+title: "group_document.qmd"
+format: html
+editor: visual
+---
+
+# Lab 7 - Group 10
+
+## Marie
+
+## Amalie
+
+## Johanna
+
+## Sofie
+
+## Malou
