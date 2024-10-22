@@ -37,6 +37,10 @@ load(output_file)
 
 ```
 
+## Explanation of data
+
+The Gravier dataset contains gene expression data from 168 patients with breast cancer. The data is used to classify the patients into two prognostic classes: "good" and "poor" prognosis based on their 5-year survival outcomes. The dataset features 2905 gene expression levels for each patient. 111 patients were labelled good and 57 patients were labelled poor.
+
 ## Data wrangling
 
 **Cleaning data:**
@@ -50,9 +54,10 @@ gravier_clean <- gravier |>
 **Compressing the data:**
 
 ```{r}
-# tsv is ta seperated
+# tsv is tab seperated
 
-readr::write_tsv(x = gravier_clean, file = gzfile("data/02_gravier_clean.tsv.gz"))
+gravier_clean  |> 
+  write_tsv(file = "data/02_gravier_clean.tsv.gz")
 ```
 
 **Changing non-numeric variable:**
@@ -69,6 +74,7 @@ gravier_clean_aug <- gravier_clean |>
 ### Principal Component Analysis - PCA
 
 ```{r}
+# we do the PCA on the numers in our dataframe which are numeric 
 
 pca_fit <- gravier_clean_aug %>% 
   select(where(is.numeric)) %>% # retain only numeric columns
@@ -80,15 +86,12 @@ pca_fit <- gravier_clean_aug %>%
 
 ```{r}
 pca_fit %>%
-  augment() %>% # add original dataset back in
-  ggplot(aes(.fittedPC1, .fittedPC2, color = outcome)) + 
-  geom_point(size = 1.5) +
-  scale_color_manual(
-    values = c(malignant = "#D55E00", benign = "#0072B2")
-  ) +
-  theme_half_open(12) + background_grid()
+  augment(gravier_clean_aug) %>% # add original dataset back in 
+  ggplot(aes(.fittedPC1, .fittedPC2, color=as.factor(early_metastasis))) +
+  geom_point() + 
+  ggtitle('Principal components coordinats') +
+  guides(color = guide_legend(title = "Early metastasis"))
+  
 ```
-
-### 
 
 ### Evaluating the variance explained in each PC
