@@ -94,6 +94,8 @@ pca_fit %>%
   
 ```
 
+A PCA plot showing two principal components. From the PCA plot, plotting PC1 and PC2 against each other, there is no evident separation between the early-metastasis (1) and non-early-metastasis group (0). However, this might be explain by PC1 and PC2 not explaining enough of the dataset on their own to make this separation clear. We therefore further investigate the degree of explanation of each PC.
+
 ### Evaluating the variance explained in each PC
 
 We want to look at the principle components
@@ -103,7 +105,7 @@ pca_fit |>
   tidy(matrix = "eigenvalues")
 ```
 
-Now I make the plot for the principle components that are explaining the variance in te gravier dataset
+Now we make the plot for the principle components that are explaining the variance in te gravier dataset
 
 ```{r}
 pca_fit |> 
@@ -116,3 +118,5 @@ pca_fit |>
     expand = expansion(mult = c(0, 0.01))
   ) 
 ```
+
+We see, that even though PC1 and PC2 explains the most, as one would expect as these are often ranked, it still lies at approx. 16% of the dataset, meaning much still is left to be explained. However, it also just might be, that there is no evident separation between these genes and early metastasis.
